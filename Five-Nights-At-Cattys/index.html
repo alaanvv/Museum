@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+  <link rel='stylesheet' href='./assets/css/style.css'>
+
+  <title> Five Night At Catty's </title>
+</head>
+
+<body>
+  <!-- MISC -->
+  <script src='./assets/js/global.js'></script>
+
+  <!-- SCREEN -->
+  <div id="screen"></div>
+  <script src='./assets/js/screen.js'></script>
+  <script src='./assets/js/door.js'></script>
+  <script src='./assets/js/window.js'></script>
+
+  <!-- CATS -->
+  <img src="./assets/img/jumpscare/black-cat-jumpscare.png" alt="Black cat" class="jumpscare black-cat-jumpscare display-none">
+  <img src="./assets/img/jumpscare/white-cat-jumpscare.png" alt="White cat" class="jumpscare white-cat-jumpscare display-none">
+  <img src="./assets/img/jumpscare/devil-cat-jumpscare.png" alt="Devil cat" class="jumpscare devil-cat-jumpscare display-none">
+  <script src='./assets/js/cats/whiteCat.js'></script>
+  <script src='./assets/js/cats/blackCat.js'></script>
+  <script src='./assets/js/cats/devilCat.js'></script>
+
+  <!-- BUTTONS -->
+  <div id="buttons">
+    <div class="camera-btn"> VVV CÂMERA VVV </div>
+    <div class="left-btn"> &lt; <br> &lt; <br> &lt; <br> &lt; <br> &lt; <br> &lt; </div>
+    <div class="right-btn"> &gt; <br> &gt; <br> &gt; <br> &gt; <br> &gt; <br> &gt; </div>
+    <div class="window-look-btn display-none"> LOOK </div>
+    <div class="door-look-btn display-none"> LOOK </div>
+  </div>
+  <script src='./assets/js/buttons.js'></script>
+
+  <!-- CAMERA -->
+  <div id="camera" class="display-none"> 
+    <div class="panel">
+      <h3 class="clock"> 00:00 </h3>
+      <button class="cam cam1"> LIVING ROOM </button>
+      <button class="cam cam2"> OUTSIDE </button>
+      <button class="cam cam3"> VENT 1 </button>
+      <button class="cam cam4"> VENT 2 </button>
+      <button class="cam cam5"> VENT 3 </button>
+    </div>
+    <div class="display"></div>
+  </div>
+  <script src='./assets/js/camera.js'></script>
+
+  <script src='./assets/js/game.js'></script>
+</body>
+
+</html>

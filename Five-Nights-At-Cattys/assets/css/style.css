@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-family: 'Courier New', Courier, monospace;
+
+  user-select: none;
+  -webkit-user-select: none;
+  overflow: hidden;
+}
+
+h3 {
+  text-align: center;
+}
+
+/* --- */
+
+#screen {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  background-size: 100vw 100vh;
+  background-image: url('/assets/img/room/room.png'); 
+
+  animation: breath 10s ease-in-out alternate infinite;
+}
+
+/* --- */
+
+#camera {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+
+  background-color: #000;
+
+  color: #fff;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  height: 100vh;
+  width: 20%;
+  border-right: 1px solid white;
+
+  background-color: rgb(37, 40, 49);
+}
+
+.cam {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 80%;
+  width: 250px;
+  height: 120px;
+  border: 1px solid white;
+  
+  cursor: pointer;
+  font-size: 2em;
+
+  box-shadow: 4px 4px 4px #000;
+  
+  background-color: rgb(169, 169, 169)
+}
+.cam:active {
+  box-shadow: inset 1px 1px 4px #000;
+  padding: 3px 0 0 3px;
+  font-size: 1.95em;
+}
+
+.display {
+  width: 100%;
+  height: 100%;
+
+  background-size: 100% 100%;
+}
+
+.jumpscare {
+  left: 20vw;
+  height: 100%;
+  position: absolute;
+}
+
+/* --- */
+
+#buttons > * {
+  position: absolute;
+  z-index: 1000;
+  
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 3px;
+ 
+  background-color: rgba(200, 200, 200, 0.2);
+  
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+.camera-btn {
+  width: 200px;
+  height: 30px;
+
+  left: 45vw;
+  bottom: 20px;
+
+  padding: 3px;
+}
+
+.left-btn {
+  width: 30px;
+  left: 1vw;
+  bottom: 45vh;
+}
+
+.right-btn {
+  width: 30px;
+  right: 1vw;
+  bottom: 45vh;
+}
+
+.window-look-btn {
+  right: 5vw;
+  bottom: 45vh;
+  cursor: pointer;
+}
+
+.door-look-btn {
+  left: 5vw;
+  bottom: 45vh;
+  cursor: pointer;
+}
+
+/* --- */
+
+.display-none {
+  display: none !important;
+}
+
+/* --- KEY FRAMES --- */
+
+@keyframes openCam {
+  0% { background-image: url('/assets/img/room/room.png'); } 
+  25% { background-image: url('/assets/img/cam/open1.png'); }
+  50% { background-image: url('/assets/img/cam/open2.png'); }
+  75% { background-image: url('/assets/img/cam/open3.png'); }
+  100% { background-image: url('/assets/img/cam/open3.png'); }
+}
+@keyframes closeCam {
+  0% { background-image: none; }
+  20% { background-image: url('/assets/img/cam/open3.png'); }
+  40% { background-image: url('/assets/img/cam/open2.png'); }
+  60% { background-image: url('/assets/img/cam/open1.png'); }
+  80% { background-image: url('/assets/img/room/room.png'); } 
+  100% { background-image: url('/assets/img/room/room.png'); } 
+}
+
+@keyframes left {
+  0% { background-image: url('/assets/img/room/room.png'); } 
+  33% { background-image: url('/assets/img/door/left1.png'); }
+  66% { background-image: url('/assets/img/door/door.png'); }
+  100% { background-image: url('/assets/img/door/door.png'); }
+}
+@keyframes leftToRoom {
+  0% { background-image: url('/assets/img/door/door.png'); }
+  33% { background-image: url('/assets/img/door/left1.png'); }
+  66% { background-image: url('/assets/img/room/room.png'); } 
+  100% { background-image: url('/assets/img/room/room.png'); } 
+}
+
+@keyframes right {
+  0% { background-image: url('/assets/img/room/room.png'); } 
+  33% { background-image: url('/assets/img/window/right1.png'); }
+  66% { background-image: url('/assets/img/window/window.png'); }
+  100% { background-image: url('/assets/img/window/window.png'); }
+}
+@keyframes rightToRoom {
+  0% { background-image: url('/assets/img/window/window.png'); }
+  33% { background-image: url('/assets/img/window/right1.png'); }
+  66% { background-image: url('/assets/img/room/room.png'); } 
+  100% { background-image: url('/assets/img/room/room.png'); } 
+}
+
+@keyframes breath {
+  0% { background-position: 0%; background-size: 105% 100%; }
+  100% { background-position: 105%; background-size: 105% 100%; }
+}
+@keyframes camMove {
+  0% { background-position: 0%; background-size: 110% 100%; }
+  100% { background-position: 110%; background-size: 110% 100%; }
+}
+
+@keyframes jump {
+  0% {
+    height: 0%;
+    top: 100vh;
+    left: 50vw;
+  }
+  100% {
+    height: 150%;
+    top: 0;
+    left: 20vw;
+  }
+}
+@keyframes scare {
+  0% {
+    height: 150%;
+    top: -10vh;
+    left: 10vw;
+  }
+  100% {
+    height: 150%;
+    top: -40vh;
+    left: 20vw;
+  }
+}
