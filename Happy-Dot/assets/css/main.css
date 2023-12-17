@@ -1,0 +1,123 @@
+:root { --main: rgb(202, 172, 108); }
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    
+    background-color: var(--main);
+    overflow: hidden;
+
+    font-family: sans-serif;
+    font-size: 100px;
+    user-select: none;
+}
+
+.display {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 800px;
+    height: 600px;
+    padding: 15px;
+    border-radius: 10px;
+
+    background-color: rgb(228, 131, 66);
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.points {
+    position: absolute;
+    bottom: -2.5em;
+    
+    width: 100%;
+
+    text-align: center;
+    font-size: 0.3em;
+    font-weight: 600;
+}
+
+.circle {
+    position: absolute;
+    top: 47%;
+    left: 47%;
+
+    aspect-ratio: 1;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.dot {
+    background-color: rgb(255, 174, 0);
+    z-index: 1;
+}
+
+.dot2 { width: 40px; }
+.dot3 { width: 25px; }
+
+.antidot {
+    width: 50px;
+    height: 50px;
+
+    background-color: rgb(139, 54, 209);
+
+    transition: all linear 500ms;
+    animation: maluquice linear 3s infinite;
+
+    font-size: 0.4em;
+    text-align: center;
+}
+
+.inv { visibility: hidden; }
+
+.exorcista {
+    position: absolute;
+
+    width: 100%;
+
+    z-index: 1000;
+}
+
+.upgrade-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.2em;
+}
+
+.upgrades {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+
+    width: 100%;
+}
+
+.up {
+    background-color: var(--main);
+    padding: 0.8em;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+@keyframes maluquice {
+    from { transform: rotate(0deg); } 
+    to { transform: rotate(360deg); }
+}
