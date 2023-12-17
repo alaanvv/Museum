@@ -1,0 +1,14 @@
+names = []
+
+function check() {
+    captions = document.querySelectorAll('.CNusmb')
+    
+    for (const linha of captions) {
+        caption = linha.innerText.toLowerCase()
+        
+        for (const name of names)
+            if (caption.includes(name)) alert()
+    }
+}
+
+setInterval(check, 1000)

@@ -1,0 +1,19 @@
+names = []
+answer = ''
+
+function check() {
+    captions = document.querySelectorAll('.CNusmb')
+    
+    for (const linha of captions) {
+        caption = linha.innerText.toLowerCase()
+        
+        for (const name of names)
+            if (caption.includes(name)) {
+                document.querySelector('.tL9Q4c').value = answer
+                document.querySelector('.Cs0vCd').removeAttribute('disabled')
+                document.querySelector('.Cs0vCd').click()
+            }
+    }
+}
+
+setInterval(check, 1000)
