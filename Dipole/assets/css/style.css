@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 98vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #000;
+
+  font-family: sans-serif;
+  color: #fff;
+}
+
+/* Mobile Message */
+
+.mobile-message {
+  display: none;
+
+  padding: 10px;
+
+  text-align: center;
+  font-weight: bold;
+}
+@media (max-width: 767px) {
+  .mobile-message { display: block; }
+}
+
+/* Display */
+
+.display {
+  flex-grow: 1;
+
+  padding: 40px;
+}
+
+.object {
+  position: relative;
+  
+  aspect-ratio: 1;
+  width: 70vh;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.pack {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 15px;
+
+  padding: 0 5px;
+  border: 0.5px solid white;
+  transform-origin: center;
+  border-radius: 2px;
+
+  font-size: 25px;
+
+  background-color: #fff3;
+}
+.pack::before {
+  content: " - ";
+}
+.pack::after {
+  content: " + ";
+}
+
+  /* Responsive object */
+@media (max-width: 740px) {
+  .display {
+    padding: 10px;
+    flex-grow: 0;
+  }
+  .object { 
+    width: 100%; 
+  }
+}
+@media (max-width: 600px) {
+  .pack {
+    gap: 5px;
+    font-size: 15px;
+  }
+}
+
+/* Select */
+
+.select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 50%;
+  margin: 0 auto;
+  padding: 30px;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.5);
+
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.select div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  aspect-ratio: 1;
+  width: 50px;
+  border: 1px solid white;
+
+  cursor: pointer;
+}
+
+.select div.selected {
+  border-width: 3px;
+}
