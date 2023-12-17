@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    padding: 20px;
+
+    font-family: sans-serif;
+    user-select: none;
+    font-size: 30px;
+}
+
+.dexter {
+    height: 160px;
+    width: 160px;
+    
+    overflow: hidden;
+}
+
+.dexter img {
+    transform: scale(10);
+    image-rendering: pixelated;
+
+    margin-left: 216px;
+    margin-top: 72px;
+
+    animation: idle linear 500ms infinite;
+}
+
+@keyframes idle {
+    0% { margin-left: 56px }
+    50% { margin-left: 56px }
+    51% { margin-left: 216px }
+    100% { margin-left: 216px }
+}
