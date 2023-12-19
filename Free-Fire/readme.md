@@ -3,6 +3,7 @@
 
   ---
 
+  [View](https://alaanvv-free-fire.netlify.app)  
   First alaanvv's "game" and "big project"  
   This stands as a second version, with some  
   **small** improvements  
