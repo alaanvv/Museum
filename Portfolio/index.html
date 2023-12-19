@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/img/iconx.png">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Alan Vale</title>
+</head>
+
+<body>
+  <div class="scroll-container">
+
+    <section class="canvas-area">
+      <h1>ALAN VALE</h1>
+      <canvas></canvas>
+
+      <script src="./assets/js/canvas.js"></script>
+    </section>
+
+    <section class="about-me">
+      <div class="me-area">
+        <div class="text">
+          <h2>About Me</h2>
+
+          <p>
+            Hi there! My name is Alan, and I'm a full stack developer. <wbr>
+        At 17 years old, I'm passionate about creating high-quality, creative <wbr>
+        and minimalist software solutions that can make a real difference in people's lives. <br>
+            <br>
+            I have a strong background in web development, with experience working <wbr>
+        with languages such as HTML, CSS, JavaScript, Python, and NodeJS. <wbr>
+        I'm particularly interested in developing full-stack applications that <wbr>
+        are responsive, user-friendly, and visually appealing. <br>
+            <br>
+            When I'm not coding, I enjoy to write stories, play music and play Table RPG. <wbr>
+            I believe that a well-rounded individual is best equipped to handle the <wbr>
+            challenges of software development, and I strive to bring that same level <wbr>
+            of enthusiasm and dedication to all of my projects. <br>
+            <br>
+            If you're interested in learning more about me and my work, feel free <wbr>
+        to check my social accounts. <wbr>
+        I'm always excited to connect with other developers and collaborate on <wbr>
+        new projects, so don't hesitate to get in touch! <wbr>
+          </p>
+        </div>
+        <div class="right-side">
+          <img
+            src="https://66.media.tumblr.com/b59b50c0161f2658c79d16907a1d48b8/6a604bb0aab46003-e1/s640x960/408f8af5700a0927377cd69ce33d15088f679a72.jpg"
+            alt="pic of me">
+        </div>
+      </div>
+
+      <div class="contact">
+        <fieldset>
+
+          <legend>Send me a email</legend>
+          <form action="https://formsubmit.co/valealan84@gmail.com" method="POST">
+            <label>
+              Your email:
+              <input type="email" name="email" required>
+            </label>
+
+            <label>
+              Your message:
+              <textarea name="message" cols="30" rows="5"></textarea>
+            </label>
+
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="box">
+            <button type="submit">Send</button>
+          </form>
+        </fieldset>
+
+        <div class="social">
+          <div class="album">
+            <p> Social <br> ‎ ‎ Accounts </p>
+          </div>
+          <div class="items">
+            <a href="https://github.com/alaanvv" target="_blank">
+              <div class="item item-1"> <img src="./assets/img/github.png" alt="Github"> Github </div>
+            </a>
+            <a href="https://steamcommunity.com/id/alaanvv" target="_blank">
+              <div class="item item-2"> <img src="./assets/img/steam.png" alt="Steam"> Steam </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+
+      <div class="carousel">
+        <div class="left card"></div>
+        <div class="current front centered card"></div>
+        <div class="right card"></div>
+      </div>
+
+      <script src="./assets/js/carousel.js"></script>
+      <script type="module" src="./assets/js/cubeRain.js"></script>
+    </section>
+  </div>
+
+</body>
+
+</html>
