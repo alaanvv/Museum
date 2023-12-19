@@ -3,6 +3,7 @@
 
   ---
 
+  [View](https://alaanvv-snake-game.netlify.app)  
   This was made when **alaanvv** was already  
   one of the programming celestial creatures,  
   so, it's not as good as the other things he  
