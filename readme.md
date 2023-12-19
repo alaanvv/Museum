@@ -7,7 +7,10 @@
 </div>
 
 ---
-  
+
+It's a place to store my old or small projects,  
+paying a price of losing my contribution history  
+
 ### Here you'll wonder so many things
 
 - Poor programming
