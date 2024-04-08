@@ -28,4 +28,4 @@ bot.on('messageCreate', async message => {
   player.play(createAudioResource(createReadStream('temp.mp3')))
 })
 
-bot.login('MTA3NzA0NDE0NzIzMzQ4ODk0Nw.G9ZKK-.Gf1vb4zPFs4YxWPpMVOuIbi9JlpgbtL-kTYCI0')
+bot.login('TOKEN')
